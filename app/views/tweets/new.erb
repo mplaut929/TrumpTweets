@@ -1,0 +1,10 @@
+<h1>Say Something Dumb:</h1>
+
+<%= form_for @tweet do |f| %>
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+  <%= f.collection_select(:trump_id, Trump.all, :id, :mood, prompt: true) %>
+  <%= f.submit "Publish to the entire World!!!!!!!!!!!!" %>
+
+
+<% end %>

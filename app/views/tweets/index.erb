@@ -1,0 +1,12 @@
+<h1>Tweeeetzzz</h1>
+
+
+<% @tweets.each do |t| %>
+  <ul>
+    <li><%= t.content %><br>
+      - <%= link_to t.trump.mood, trump_path(t.trump_id) %><br>
+      - Hours worked: <%=t.trump.hours_worked%>
+    <%# <%= button_to "I F*cked Up", t, method: :edit %></li>
+    <%= button_to "I Really F*cked Up", t, method: :delete, data: { confirm: "Mueller can still find this!!" } %></li>
+    </ul>
+<% end %>
